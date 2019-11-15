@@ -1,3 +1,27 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+register:
+  path: /register
+  controller: App\Controller\AuthController::register
+  methods: POST
+
+api:
+  path: /api
+  controller: App\Controller\AuthController::api
+
+login_check:
+  path:     /login_check
+  methods:  [POST]
+
+retirerDeposer:
+  path: /api/retireDepose
+  controller: App\Controller\DeposerRetirerController::deposer_retirer_argent
+
+virementInterne:
+  path: /api/virementInterne
+  controller: App\Controller\VirementInterneController::virement_interne
+
+virementExterne:
+  path: /api/virementExterne
+  controller: App\Controller\VirementExterneController::virement_externe
